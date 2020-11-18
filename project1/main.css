@@ -1,0 +1,36 @@
+
+
+body{
+background-image: url("img/backround.PNG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media only screen and (max-width: 700px) {
+    body {
+        background-image: url("img/music app mobile (1).PNG");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+form{
+    border: 2px solid green;
+    width: 500px;
+  top: 30%;
+    left: 35%;
+    position: absolute;
+    border-radius: 10px 5px;
+    padding: 30px;
+}
+small{
+    color: white;
+    /*display: none;*/
+    /*visibility: visible;*/
+}
+.lokaal_div{
+    display: none;
+}
+.instrumenten_div{
+    display: none;
+}

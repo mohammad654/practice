@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Animations</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+
+        body {
+            background-color: rgb(30, 30, 30);
+            color: rgb(200, 200, 200);
+            font-family: 'Lato', sans-serif;
+            margin:0;
+            padding:0;
+        }
+
+        #web-animation {
+            background-color: black;
+            border:crimson solid 4px;
+            width:200px;
+            height:200px;
+            margin:5rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="web-animation"></div>
+<!--    <script src="app.js"></script>-->
+
+    <button onclick="rotatingSquare.play()" type="button">Play</button>
+    <button onclick="rotatingSquare.pause()" type="button">Pause</button>
+    <button onclick="rotatingSquare.playbackRate+=0.2" type="button">Speed Up</button>
+    <button onclick="rotatingSquare.playbackRate-=0.2" type="button">Slow Down</button>
+    <script>
+        var rotatingSquare = document.getElementById("web-animation").animate(
+            [
+                { backgroundColor: '#000000', opacity: 1.0, transform: 'rotate(0deg) translate3D(0, 0, 0)' },
+                { backgroundColor: '#440000', opacity: 0.3 },
+                { backgroundColor: '#000000', opacity: 1.0, transform: 'rotate(360deg) translate3D(0, 0, 0)' }
+            ],
+            {
+                duration: 500,
+                iterations: Infinity,
+                easing: 'ease-in-out'
+            }
+        )
+
+    </script>
+</body>
+</html>

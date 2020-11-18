@@ -1,0 +1,50 @@
+
+    let animated13 =document.getElementById("animated13");
+    if ( confirm("Mo")===true){
+        console.log("Ok");
+    }else {
+        console.log("Cancel");
+    }
+
+
+
+setTimeout: One time
+clearTimeout
+
+setInterval : infinity
+clearInterval
+
+
+
+
+English
+
+JavaScript code runs sequentially
+you have to capture that event
+dot notation
+default prevented
+current target
+coordinate system
+event propagation
+capturing bubbling
+
+
+
+
+
+    let animate=document.getElementById("animate");
+    let lis=document.querySelector("#list");
+
+    lis.addEventListener("click",(e) =>{
+        var  removeTarget=e.target;
+        if (e.target.tagName==="LI"){
+            removeTarget.parentNode.removeChild(removeTarget);
+            console.log(removeTarget);
+            console.log('YES');
+        }
+    },false);
+
+?????????????????????
+  rotatingSquare.animate()
+  toElement
+  stopPropagation

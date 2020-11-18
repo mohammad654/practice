@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Animations</title>
+<!--    <link rel="stylesheet" href="app.css">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato');
+
+        body {
+            background-color: rgb(30, 30, 30);
+            color: rgb(200, 200, 200);
+            font-family: 'Lato', sans-serif;
+            margin:0;
+            padding:0;
+            padding-top: 20px;
+        }
+
+        #circle {
+            width: 50px;
+            height: 50px;
+            left: 0px;
+            border-radius: 50px;
+            background-color: crimson;
+            position: relative;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+<!--    <script src="app.js"></script>-->
+    <script>
+        var ol = 0;
+        var isPlaying = false;
+        var circleInterval;
+
+        var el = document.getElementById("circle");
+        var sc = 1;
+
+        function circleAnimation(time) {
+            ol++;
+            sc++;
+            el.style.left = ol + "px";
+            el.style.width = sc + "px";
+            el.style.height = sc + "px";
+            el.style.borderRadius = sc*100 + "px";
+            circleInterval = requestAnimationFrame(circleAnimation);
+        }
+
+        function mouseClicked(){
+            if(isPlaying){
+                isPlaying = false;
+                document.getElementById("circle").style.backgroundColor = "dimgrey";
+                cancelAnimationFrame(circleInterval);
+            }else{
+                isPlaying = true;
+                document.getElementById("circle").style.backgroundColor = "crimson";
+                circleInterval = requestAnimationFrame(circleAnimation);
+            }
+        }
+
+        document.getElementById("circle").addEventListener("click", mouseClicked);
+        document.getElementById("circle").style.backgroundColor = "dimgrey";
+    </script>
+</body>
+</html>

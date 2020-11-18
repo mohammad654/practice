@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--IE compatibility meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--First mobile meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Title -->
+    <title>Try</title>
+    <!--IE HTML5 -->
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <!--IE Respond -->
+    <script href="./min/respond.js"></script>
+    <!--Bootstrap link online -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="./min/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+    <style>
+        body{
+            height: 3000px;
+        }
+/* start Color ______________________________________________________________________________-*/
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            cursor: pointer;
+        }
+        ul li:first-child{
+            background-color: #9afff2;
+        }
+        ul li:nth-child(2){
+            background-color: #ff7a19;
+        }
+        ul li:nth-child(3){
+            background-color: #414cff;
+        }
+        ul li:nth-child(4){
+            background-color: #95ff9f;
+        }
+        ul li:nth-child(5){
+            background-color: #c9a6ff;
+        }
+        h1{
+            /*color: #ffee11;*/
+        }
+/* End Color  ______________________________________________________________________________-*/
+
+/* start Text  ______________________________________________________________________________-*/
+.scroll{
+    color: #4b9815;
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+/* End Text ______________________________________________________________________________-*/
+
+
+/* start  ______________________________________________________________________________-*/
+/* End   ______________________________________________________________________________-*/
+</style>
+<body>
+
+<!-- Start Color  ------------------------------------------------------------------------------------------------>
+
+<h1 class="text-center" id="di">Mohammad</h1>
+
+<ul class="text-center">
+    <li data-color="#9afff2"></li>
+    <li data-color=" #ff7a19"></li>
+    <li data-color="#414cff"></li>
+    <li data-color="#95ff9f"></li>
+    <li data-color="#c9a6ff"></li>
+</ul>
+<!-- End ------------------------------------------------------------------------------------------------>
+<div class="container text">
+    <textarea class="ml-5" id="textarea" rows="2" cols="31" maxlength="20"></textarea>
+    <span id="text_span">20</span>
+
+    <input type="password" id="pas">
+    <button id="show">Show</button>
+
+    <span class="scroll" id="scroll_top">Scroll To Top</span>
+</div>
+<span id="text2"></span>
+
+
+
+<!-- Start  Text---------------------------------------------------------------------------------------------->
+
+<!-- End Text ------------------------------------------------------------------------------------------------>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+//Start Color ____________________________________________________
+    let my_list=document.querySelectorAll("ul li ");
+    let my_dive=document.getElementById("di");
+    let array=[];
+    let i;
+    for ( i=0; i<my_list.length; i++){
+
+        array.push(my_list[i].getAttribute("data-color"));
+
+        my_list[i].addEventListener("click",function () {
+
+       let color=this.getAttribute("data-color");
+
+      let set_color= localStorage.setItem("chose_name",color);
+
+      let get_color= localStorage.getItem('chose_name');
+
+            my_dive.style.color= get_color;
+
+           console.log("localStorage : " + get_color);
+        });
+    }
+    onload =()=>{
+        for ( i=0; i<my_list.length; i++){
+            my_dive.style.color= localStorage.getItem('chose_name');
+        }
+    };
+// Text ____________________________________________________
+    let text_area =document.getElementById("textarea"),
+        maxlength_area=text_area.getAttribute("maxlength"),
+       text_span =document.getElementById("text_span");
+    console.log();
+
+text_area.oninput=function () {
+    text_span.innerHTML=maxlength_area-this.value.length;
+    if (text_span.innerHTML== 0){
+        text_span.style.color="red";
+    }else {
+        text_span.style.color="#4b9815";
+    }
+};
+// Show ____________________________________________________
+let show=document.getElementById("pas"),
+    button1=document.getElementById("show");
+button1.onclick=function () {
+if (this.textContent==="Show"){
+    show.setAttribute("type","text");
+    this.textContent="Hide";
+
+}else {
+    show.setAttribute("type","password");
+    this.textContent="Show";
+}
+};
+// Scroll ____________________________________________________
+
+let scroll_top=document.getElementById("scroll_top");
+    window.onscroll=function () {
+        if (window.pageYOffset>=400) {
+            scroll_top.style.display = "block";
+            console.log("Yes");
+        } else {
+            scroll_top.style.display = "none";
+            console.log("No");
+        }
+    };
+scroll_top.onclick=function () {
+window.scroll(0,0);
+}
+
+</script>
+</body>
+</html>
+
+<!-- Start ---------------------------------------------------------------------------------------------->
+<!-- End ------------------------------------------------------------------------------------------------>

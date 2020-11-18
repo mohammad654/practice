@@ -1,0 +1,241 @@
+
+
+body{
+    background-color: #a3ff45;
+}
+
+/*Upper Bar*/
+.upper-bar{
+    background-color:#08526d;
+    color: #fff;
+    padding: 20px;
+    font-weight: bold;
+ }
+.upper-bar a{
+    text-decoration: none;
+    color:#fff ;
+    float: left;
+
+}
+.upper-bar img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border-radius: 30%;
+    float: right;
+}
+/*Nav bar*/
+.navbar .container {
+    font-weight: bold;
+
+
+}
+.navbar .container .active{
+    background: #777;
+    opacity: 50%;
+    border-radius:15px 5px 15px 5px;
+    -webkit-transition: all 1s ease-in-out ;
+    -o-transition: all 1s ease-in-out ;
+    -moz-transition: all 1s ease-in-out ;
+    transition: all 1s ease-in-out ;
+}
+.navbar .container .active:hover{
+    opacity: 90%;
+    border-radius:0;
+}
+.navbar .container .nav-link{
+    padding:15px;
+}
+/*________________________________________________________________________________*/
+
+.carousel .carousel-inner{
+
+}
+.carousel .carousel-inner h1{
+    color: #fff;
+    position: absolute;
+    z-index: 3;
+    font-size: 60px;
+    padding-top: 300px;
+   margin-left: 37%;
+}
+.carousel .carousel-inner .overlay{
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+.slide .carousel-item{
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:500px;
+}
+.slide .carousel_one{
+    background-image: url("https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/1/5/8/9200000081968516.jpg");}
+.slide .carousel_two{
+    background-image: url("https://woodprint.nl/wp-content/uploads/2018/08/Wereldkaart-op-Hout-Memories.jpg");
+}
+
+.slide .carousel_three{
+    background-image: url("https://cdn.webshopapp.com/shops/252222/files/165323573/650x750x2/image.jpg");
+}
+.slide  .carousel-indicators li{
+    height: 10px;
+    cursor: pointer;
+}
+
+
+/*________________________________________________________________________________*/
+.features{
+    background-color: white;
+    padding:30px 10px;
+}
+.features h4{
+   color: #08526d;
+    margin-left: 50px;
+    font-size: 22px;
+}
+.features i{
+    font-size: 30px;
+    color: #24720c;
+    padding:10px;
+    margin-left: 80px;
+}
+.features p{
+    padding-left: 30px;
+    color: #989898;
+}
+
+/*________________________________________________________________________________*/
+
+.overview{
+    background-color: #f0f5f7;
+    padding: 30px;
+}
+.overview .container{
+    position: relative;
+}
+.overview h1{
+    color: #08526d;
+    text-align: center;
+}
+.overview p{
+    color: #989898;
+    line-height: 40px;
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+}
+.overview span{
+  letter-spacing: 10px;
+    padding:10px 30px;
+    margin-left: 44%;
+    text-transform: uppercase;
+}
+.overview  button{
+    color: #fff;
+    padding: 10px 40px;
+    margin-left:48%;
+    margin-top: 30px;
+    background-color: #ed1d24;
+    border: none;
+    box-shadow: 3px 3px 2px #666;
+
+}
+
+/*________________________________________________________________________________*/
+
+.features_work{
+    padding: 30px;
+    background-color: white;
+}
+.features_work  h1{
+    color: #08526d;
+    text-align: center;
+}
+.features_work p{
+    line-height: 40px;
+    margin: 30px ;
+}
+.features_work ul{
+    border: solid 2px #08526d ;
+    background-color: white;
+    opacity: 60%;
+    border-radius: 10px;
+}
+.features_work a{
+   text-decoration: none;
+    color: rgba(5, 0, 170, 0.67);
+}
+.features_work ul:hover{
+    background-color: #ed1d24;
+}
+.features_work ul li{
+   display: inline-block;
+    padding: 10px 0;
+}
+/*________________________________________________________________________________*/
+
+.card-group{
+    background-color: white;
+
+}
+.card-group .card  {
+    box-shadow: 3px 3px 2px #666;
+    margin: 10px;
+    text-align: center;
+
+}
+.card-group .card p {
+   color: #4e555b;
+
+}
+.card-group .card-body a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 25px;
+    padding-bottom:40px;
+
+}
+
+
+.card-group .card-body a::before {
+   content: "\f007";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 20px;
+}
+ .contact .container {
+    background-color: #fcfcfc;
+}
+
+
+.contact {
+    background-color: #fcfcfc;
+   padding: 50px;
+    width: 100%;
+}
+
+
+.contact .contact_1 {
+    background-color: #595dba;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.contact .contact_2 {
+    background-color: #36ba0e;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}

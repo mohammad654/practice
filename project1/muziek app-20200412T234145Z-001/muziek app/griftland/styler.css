@@ -1,0 +1,87 @@
+body {
+     margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /*background-image: url("backround.PNG");*/
+    width: 100%;
+}
+
+.clearfix:before, .clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+a{
+    color:#0067ab;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+.form{
+
+    border: solid 1px #40ef9f;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    text-align:center;
+    margin-top:290px;
+    position: absolute;
+    left:40%;
+
+}
+input[type='text'], input[type='email'],
+input[type='password'] {
+    display: block;
+    width: 300px;
+    border-radius: 15px;
+    border: solid 1px #40ef9f;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left:40px;
+}
+input[type='submit']{
+    padding: 13px 30px 11px;
+    color: #fff;
+    background-image: linear-gradient( #3BFE82,   #24A09B);
+    text-shadow: rgba(0,0,0,0.24) 0 1px 0;
+    font-size: 16px;
+    box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+    border: solid 1px #40ef9f;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-right: 193px;
+    cursor:pointer;
+}
+input[type='submit']:hover{
+    background: #68ef1d;
+}
+@media only screen and (max-width: 702px) {
+    body {
+        background-image: url("music app mobile (1).PNG");
+    }
+    .form{position: absolute;
+        left: 20%;
+        width: 350px;
+        height: 300px;
+    }
+    input[type='submit']{
+        padding: 10px 22px 10px;
+        font-size: 16px;
+        margin-top: 13px;
+        margin-right: 170px;
+
+    }
+    input[type='text'], input[type='email'],
+    input[type='password'] {
+        width: 200px;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left:40px;
+    }
+
+}
